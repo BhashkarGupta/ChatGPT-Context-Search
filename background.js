@@ -67,9 +67,9 @@ function performSearch(selectedText, command) {
     let url;
 
     if (searchMode === "temporary") {
-      url = `https://chatgpt.com/?model=gpt-4o&q=${command} ${encodedText}&temporary-chat=true`;
+      url = `https://chatgpt.com/?q=${command} ${encodedText}&temporary-chat=true`;
     } else {
-      url = `https://chatgpt.com/?model=gpt-4o&q=${command} ${encodedText}`;
+      url = `https://chatgpt.com/?&q=${command} ${encodedText}`;
     }
 
     chrome.windows.create({
